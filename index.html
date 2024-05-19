@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_otherres.css">
+    <title>Porfolio</title>
+</head>
+<body onload="loaded()">
+    <div id="top"></div>
+    <div id="fuggony"></div>
+
+    <div id="betolto">
+        <div id="forgo">
+            <h1 class="cant_select">I</h1>
+        </div>
+        <div id="betolto_szoveg">
+            <h2 class="cant_select" >Loading <h2 id="h2_betoltesnel_pontok" class="cant_select">...</h2></h2>
+        </div>
+    </div>
+
+
+
+    <div id="container">
+
+
+        <div id="upperbar">
+            <div class="left">
+                <a href="#top" class="cant_select"><img src="./images/profilepic.png"></a>
+                <a href="#top" class="underline_hover cant_select" id="upperbar_name">Kiss Roland</a>
+            </div>
+
+
+
+            <div class="right">
+                <a class="underline_hover cant_select" href="#projects">Projects</a>
+                <a class="underline_hover cant_select" href="mailto:rolo.kiss.09@gmail.com">Contact</a>
+            </div>
+        </div>
+
+
+
+
+        <div id="hero">
+            <div class="oldal" id="oldal_left">
+                <h1 class="title cant_select">
+                    <span id="hello_left">Hello,</span> I'm a <br> <span class="fancy">programmer</span>
+                </h1>
+            </div>
+            <div class="oldal" id="oldal_right">
+                <h1 class="title cant_select">
+                    <span id="hello_right">Hello,</span> I'm a <br> <span class="fancy">developer</span>
+                </h1>
+            </div>
+
+            <div id="upinhero">
+                <a class="underline_hover cant_select" href="#projects">Projects</a>
+                <a class="underline_hover cant_select" href="mailto:rolo.kiss.09@gmail.com">Contact</a>
+            </div>
+        </div>
+
+
+
+        <div id="main">
+            <div class="bemutatkozas">
+                <h1 class="needtype fonttitle">Introduction</h1>
+                
+                <ul>
+                    <li>My name is Roland Kiss, also known as <i>Rolo</i></li>
+                    <li>I like to create things on the net :)</li>
+                    <li>I started programming at the age of 13, and since then I'm improving myself and learning new things fequently</li>
+                    <li>Most of my things are in <b>Hungarian</b> language</li>
+                </ul>
+
+            </div>
+
+
+
+
+            <div id="whatdoido">
+                <div class="bgblack">
+                    <div class="bgb"></div>
+                </div>
+
+                <h1 class="needtype fonttitle fotitle">What I do</h1>
+
+                <div class="left szovegbox hidden" id="webpagebox">
+                    <h1><a href="#webpages" class="fonttitle underline_hover">Webpages</a></h1>
+
+                    <p>I do frontend and backend for websites, and I can design a bit as well.</p>
+                </div>
+
+                <div class="right szovegbox hidden" id="luabox">
+                    <h1><a href="#scripts" class="fonttitle underline_hover">LUA Scripts</a></h1>
+
+                    <p>I did a lot of scripts in LUA language for the video game Grand Theft Auto V. I sell some on my tebex page. You can check them out ;)</p>
+                </div>
+
+                <div class="left szovegbox hidden" id="batchbox">
+                    <h1><a href="#batch" class="fonttitle underline_hover">Batch</a></h1>
+
+                    <p>When I started programming this was my first language. I created small and easy scripts for windows in Batch.</p>
+                </div>
+
+                <div class="right szovegbox hidden" id="pythonbox">
+                    <h1><a href="#python" class="fonttitle underline_hover">Python</a></h1>
+
+                    <p>I have a little experience in this now. But next year I'm going to learn this in school, so we'll se what can I create next year :)</p>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="scroll"></div>
+
+
+
+
+
+            <div class="projects" id="projects">
+                <div class="projectseleje">
+                    <h1 id="projectszoveg" class="fonttitle cant_select">Projects</h1>
+                </div>
+
+
+                <div class="projects_main">
+                    
+
+
+
+
+
+
+
+
+
+                    <!-- Weboldalak -->
+                    <div class="projectstype">
+                        <h2 id="webpages"><a href="#webpages" class="underline_hover">Webpages</a></h2>
+                    </div>
+
+
+                    <div class="project-cards">
+
+                        <div class="project hidden">
+                            <div class="fo">
+                                <div class="showcaseimg">
+                                    <img src="./images/project-sorozatmanager-5.png" alt="Showcase Image">
+                                </div>
+                                <h3 class="title">Series Manager</h3>
+
+                                <hr>
+
+                                <div class="details">
+                                    <p>You can manage your watched episodes here</p>
+
+                                    <button onclick="showcaseimgs(1)" class="underline_hover">Toggle Showcase Images</button>
+                                </div>
+                            </div>
+
+                            <div class="showcaseimgs" id="showcaseimgs-1" style="display: none;">
+                                <h3>Showcase Images</h3>
+                                <img src="./images/project-sorozatmanager-1.png" alt="Showcase Image" loading="lazy">
+                                <img src="./images/project-sorozatmanager-2.png" alt="Showcase Image" loading="lazy">
+                                <img src="./images/project-sorozatmanager-3.png" alt="Showcase Image" loading="lazy">
+                                <img src="./images/project-sorozatmanager-4.png" alt="Showcase Image" loading="lazy">
+                            </div>
+                        </div>
+
+
+
+                        <div class="project hidden">
+                            <div class="fo">
+                                <div class="showcaseimg">
+                                    <img src="./images/project-kalandjatek-1.png" alt="Showcase Image">
+                                </div>
+                                <h3 class="title">Adventure game</h3>
+                                <hr>
+
+                                <div class="details">
+                                    <p>A small project for school which came out really good</p>
+                                    <p>You can <a href="https://09rolo.github.io/Kalandjatek_2024/" target="_blank" rel="noopener noreferrer" class="underline_hover">visit the site here</a></p>
+
+                                    <button onclick="showcaseimgs(2)" class="underline_hover">Toggle Showcase Images</button>
+                                </div>
+                            </div>
+
+                            <div class="showcaseimgs" id="showcaseimgs-2" style="display: none;">
+                                <h3>Showcase Images</h3>
+                                <img src="./images/project-kalandjatek-2.png" alt="Showcase Image" loading="lazy">
+                                <img src="./images/project-kalandjatek-3.png" alt="Showcase Image" loading="lazy">
+                                <img src="./images/project-kalandjatek-4.png" alt="Showcase Image" loading="lazy">
+                            </div>
+                        </div>
+
+
+
+                        <div class="project hidden">
+                            <div class="fo">
+                                <div class="showcaseimg">
+                                    <img src="./images/project-komplex-1.png" alt="Showcase Image">
+                                </div>
+                                <h3 class="title">Project work</h3>
+                                <hr>
+
+                                <div class="details">
+                                    <p>Another project work for school</p>
+                                    <p>You can <a href="https://09rolo.github.io/KomplexProjektmunka/" target="_blank" rel="noopener noreferrer" class="underline_hover">visit the site here</a></p>
+
+                                    <button onclick="showcaseimgs(3)" class="underline_hover">Toggle Showcase Images</button>
+                                </div>
+                            </div>
+
+                            <div class="showcaseimgs" id="showcaseimgs-3" style="display: none;">
+                                <h3>Showcase Images</h3>
+                                <img src="./images/project-komplex-2.png" alt="Showcase Image" loading="lazy">
+                                <img src="./images/project-komplex-3.png" alt="Showcase Image" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+
+
+
+
+
+
+
+
+
+
+                    <!-- LUA -->
+                    <div class="projectstype">
+                        <h2 id="scripts"><a href="#scripts" class="underline_hover">LUA Scripts</a></h2>
+                    </div>
+    
+    
+                    <div class="project-cards">
+    
+                        <div class="project hidden">
+                            <div class="fo">
+                                <div class="showcaseimg">
+                                    <img src="./images/project-pedscript-1.png" alt="Showcase Image">
+                                </div>
+                                <h3 class="title">GTA Ped Script</h3>
+    
+                                <hr>
+    
+                                <div class="details">
+                                    <p>Custom made script for Grand Theft Auto V</p>
+                                    <p>With this you can play with a pedestrian model instantly when logging in because of SQL integrations</p>
+
+                                    <p>You can see <a href="https://rolo.tebex.io/package/6013052" target="_blank" rel="noopener noreferrer" class="underline_hover">this</a> and the other projects <a href="https://rolo.tebex.io/category/scriptek" target="_blank" rel="noopener noreferrer" class="underline_hover">here</a></p>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="project hidden">
+                            <div class="fo">
+                                <div class="showcaseimg">
+                                    <img src="./images/project-outfitscript-1.png" alt="Showcase Image">
+                                </div>
+                                <h3 class="title">GTA Outfit System</h3>
+    
+                                <hr>
+    
+                                <div class="details">
+                                    <p>Custom made script for Grand Theft Auto V</p>
+                                    <p>With this you can create outfit sets and save them</p>
+
+                                    <p>You can see <a href="https://rolo.tebex.io/package/6014336" target="_blank" rel="noopener noreferrer" class="underline_hover">this</a> and the other projects <a href="https://rolo.tebex.io/category/scriptek" target="_blank" rel="noopener noreferrer" class="underline_hover">here</a></p>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="project hidden">
+                            <div class="fo">
+                                <div class="showcaseimg">
+                                    <img src="./images/project-garagescript-1.png" alt="Showcase Image">
+                                </div>
+                                <h3 class="title">GTA Garage System</h3>
+    
+                                <hr>
+    
+                                <div class="details">
+                                    <p>Custom made script for Grand Theft Auto V</p>
+                                    <p>With this you can place down garages where you can use your cars, if you parked them there</p>
+
+                                    <p>You can see <a href="https://rolo.tebex.io/package/6013450" target="_blank" rel="noopener noreferrer" class="underline_hover">this</a> and the other projects <a href="https://rolo.tebex.io/category/scriptek" target="_blank" rel="noopener noreferrer" class="underline_hover">here</a></p>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="project hidden">
+                            <div class="fo">
+                                <div class="showcaseimg">
+                                    <img src="./images/project-autopilotscript-1.png" alt="Showcase Image">
+                                </div>
+                                <h3 class="title">GTA Autopilot System</h3>
+    
+                                <hr>
+    
+                                <div class="details">
+                                    <p>Custom made script for Grand Theft Auto V</p>
+                                    <p>A simple autopilot system for cars</p>
+
+                                    <p>You can see <a href="https://rolo.tebex.io/package/6013353" target="_blank" rel="noopener noreferrer" class="underline_hover">this</a> and the other projects <a href="https://rolo.tebex.io/category/scriptek" target="_blank" rel="noopener noreferrer" class="underline_hover">here</a></p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <hr>
+
+
+
+
+
+
+
+                    <!-- Batch -->
+                    <div class="projectstype">
+                        <h2 id="batch"><a href="#batch" class="underline_hover">Batch</a></h2>
+                    </div>
+    
+    
+                    <div class="project-cards">
+    
+                        <div class="project hidden">
+                            <div class="fo">
+                                <div class="showcaseimg">
+                                    <img src="./images/project-leallitas-1.png" alt="Showcase Image">
+                                </div>
+                                <h3 class="title">Shutdown script</h3>
+                                
+                                <hr>
+    
+                                <div class="details">
+                                    <p>If you shut down your computer and turn it back on it will tell you in task manager that your CPU stayed on the whole time</p>
+
+                                    <button onclick="showcaseimgs(8)" class="underline_hover">Toggle Showcase Images</button>
+                                </div>
+                            </div>
+
+                            <div class="showcaseimgs" id="showcaseimgs-8" style="display: none;">
+                                <h3>Showcase Images</h3>
+                                <img src="./images/project-leallitas-1.png" alt="Showcase Image" loading="lazy">
+                                <img src="./images/project-leallitas-2.png" alt="Showcase Image" loading="lazy">
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="project hidden">
+                            <div class="fo">
+                                <div class="showcaseimg">
+                                    <img src="./images/project-downloadbasicthings-1.png" alt="Showcase Image">
+                                </div>
+                                <h3 class="title">Download Basic Things</h3>
+                                
+                                <hr>
+    
+                                <div class="details">
+                                    <p>You can download basic apps on a newly reinstalled windows</p>
+
+                                    <button onclick="showcaseimgs(9)" class="underline_hover">Toggle Showcase Images</button>
+                                </div>
+                            </div>
+
+                            <div class="showcaseimgs" id="showcaseimgs-9" style="display: none;">
+                                <h3>Showcase Images</h3>
+                                <img src="./images/project-downloadbasicthings-2.png" alt="Showcase Image" loading="lazy">
+                                <img src="./images/project-downloadbasicthings-3.png" alt="Showcase Image" loading="lazy">
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <hr>
+
+
+
+
+
+
+
+
+                    <!-- Python -->
+                    <div class="projectstype">
+                        <h2 id="python"><a href="#python" class="underline_hover">Python</a></h2>
+                    </div>
+    
+    
+                    <div class="project-cards">
+    
+                        <div class="project hidden">
+                            <div class="fo">
+                                <div class="showcaseimg">
+                                    <img src="./images/project-ytdownloader-1.png" alt="Showcase Image">
+                                </div>
+                                <h3 class="title">Youtube video downloader</h3>
+                                
+                                <hr>
+    
+                                <div class="details">
+                                    <p>You can download videos and music in the highest resolution</p>
+
+                                    <button onclick="showcaseimgs(10)" class="underline_hover">Toggle Showcase Images</button>
+                                </div>
+                            </div>
+
+                            <div class="showcaseimgs" id="showcaseimgs-10" style="display: none;">
+                                <h3>Showcase Images</h3>
+                                <img src="./images/project-ytdownloader-2.png" alt="Showcase Image" loading="lazy">
+                                <img src="./images/project-ytdownloader-3.png" alt="Showcase Image" loading="lazy">
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <hr>
+
+
+                </div>
+
+            </div>
+
+
+
+
+            <!-- div.elerhetosegek ?-->
+
+
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
