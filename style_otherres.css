@@ -1,5 +1,5 @@
 
-@media screen and (min-width: 650) {
+@media screen and (min-width: 650px) {
     #upinhero {
         display: none !important;
     }
@@ -263,6 +263,28 @@
     }
     .project:nth-child(3) {
         transition-delay: 100ms !important;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    .cursor {
+        display: none;
+    }
+    
+    
+    
+    
+    .cursor-border {
+        display: none;
     }
 
 }

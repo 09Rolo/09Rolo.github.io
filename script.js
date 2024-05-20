@@ -1,4 +1,8 @@
+
+//-------------------------------------------------------------------------------Legeleje
+
 iras("h2_betoltesnel_pontok", "eleje")
+kurzor()
 
 
 
@@ -14,9 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-
-
-
 function loaded() {
     let betolto = document.getElementById("betolto")
 
@@ -28,51 +29,7 @@ function loaded() {
 
     
 }
-
-
-
-
-
-
-
-
-const obsever = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        console.log(entry)
-
-        if(entry.isIntersecting) {
-            entry.target.classList.add("show")
-        } else {
-            entry.target.classList.remove("show")
-        }
-    })
-})
-
-
-
-
-
-const needtypeObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        console.log(entry)
-
-        if(entry.isIntersecting) {
-            entry.target.classList.add("type")
-
-            iras(entry.target, "observeres")
-        } else {
-            
-        }
-    })
-})
-
-
-
-const hiddenElements = document.querySelectorAll(".hidden")
-hiddenElements.forEach((el) => {obsever.observe(el)})
-
-const needtypeElements = document.querySelectorAll(".needtype")
-needtypeElements.forEach((el) => {needtypeObserver.observe(el)})
+//-------------------------------------------------------------------------------
 
 
 
@@ -82,6 +39,8 @@ needtypeElements.forEach((el) => {needtypeObserver.observe(el)})
 
 
 
+
+//-------------------------------------------------------------------------------Iras
 
 function iras(element, arg) {
 
@@ -208,6 +167,7 @@ function iras(element, arg) {
         }
     }
 }
+//-------------------------------------------------------------------------------
 
 
 
@@ -217,6 +177,8 @@ function iras(element, arg) {
 
 
 
+
+//-------------------------------------------------------------------------------Showcaseimgs
 function showcaseimgs(id) {
     if(id) {
         let div = document.getElementById("showcaseimgs-" + id)
@@ -231,21 +193,6 @@ function showcaseimgs(id) {
             if (parentproject) {    
                 if (div.style.display == "none") {
                     //mutasd
-
-
-
-                    /*
-                    for(let i = 1; i < 100; i++) {
-                        setTimeout(() => {
-                            if (parentproject.style.maxWidth == "80%") {
-                                
-                            } else {
-                                parentproject.style.maxWidth = i + 30 + "%"
-                            }
-                        }, i * (i - i * 5))
-                    }
-                    */
-
 
                     parentproject.style.animationName = "projectgrow"
                     parentproject.style.animationPlayState = "running"
@@ -272,6 +219,7 @@ function showcaseimgs(id) {
         }
     }
 }
+//-------------------------------------------------------------------------------
 
 
 
@@ -282,69 +230,14 @@ function showcaseimgs(id) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const left = document.getElementById("oldal_left")
-
-const handleOnMove = e => {
-    const p = e.clientX / window.innerWidth * 100
-
-    left.style.width = p + "%"
-}
-
-
-document.onmousemove = e => handleOnMove(e)
-document.ontouchmove = e => handleOnMove(e.touches[0])
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//-------------------------------------------------------------------------------Scrollingcuccok
 window.addEventListener("scroll", setScrollVar)
 window.addEventListener("resize", setScrollVar)
 
 function setScrollVar() {
     const htmlElement = document.documentElement
     const percentOfScreenHeightScrolled = htmlElement.scrollTop / htmlElement.clientHeight
-    console.log(Math.min(percentOfScreenHeightScrolled * 100, 100))
+    //console.log(Math.min(percentOfScreenHeightScrolled * 100, 100))
     htmlElement.style.setProperty("--scroll", Math.min(percentOfScreenHeightScrolled * 100, 100))
 
     htmlElement.style.setProperty("--scroll-deg-left", Math.min(percentOfScreenHeightScrolled * 100, 100) + Math.min(percentOfScreenHeightScrolled * 90, -100) + "deg")
@@ -352,9 +245,6 @@ function setScrollVar() {
 }
 
 setScrollVar()
-
-
-
 
 
 
@@ -383,63 +273,223 @@ function startscrollanims() {
     })
 
 
+}
+//-------------------------------------------------------------------------------
 
 
-    /*
-    ScrollTrigger.create({
-        trigger: "#whatdoido",
-        start: "10%",
-        end: "50%",
-        scrub: 1,
-        pin: true,
-        onUpdate: (self) => {
-            let szovegboxes = document.querySelectorAll(".szovegbox")
-
-            if (szovegboxes) {
-                let count = 0
-
-                szovegboxes.forEach(box => {
-                    count++
-                    console.log(count)
-                    let left = false
-                    let right = false
-
-                    for(let i = 0; i < box.classList.length; i++) {
-                        if (box.classList[i] == "left") {
-                            left = true
-                            break
-                        } else if(box.classList[i] == "right") {
-                            right = true
-                            break
-                        }
-                    }
-                    
-
-                    if (left == true) {
-                        gsap.to(box, {
-                            x: `${20 * self.progress}vw`,
-                            duration: 0,
-                        }) 
-                    } else if (right == true) {
-                        gsap.to(box, {
-                            x: `${-20 * self.progress}vw`,
-                            duration: 0,
-                        }) 
-                    }
-                })
-            }
 
 
-            /*
-            gsap.to(".szovegbox", {
-                x: `${10 * self.progress}vw`,
-                y: `${-10 * self.progress}vh`,
-                duration: 1.5,
-                ease: "power3.out",
+
+
+
+
+
+
+//-------------------------------------------------------------------------------Kurzor
+function kurzor() {
+    let body = document.querySelector("body")
+    body.id = "body"
+    body = document.getElementById("body")
+    
+
+
+    body.innerHTML += `
+        <div class='cursor'></div>
+        <div class='cursor-border cursor_pulse'></div>
+    `
+
+    
+    
+    const cursor = document.querySelector(".cursor")
+    const cursor_border = document.querySelector(".cursor-border")
+
+    document.addEventListener("mousemove", (merre) => {
+        handleOnMove(merre)
+    
+        const posX = merre.clientX
+        const posY = merre.clientY
+    
+        
+        //cursor.setAttribute("style", "top: " + merre.clientY + "px" +    "; left: " + merre.clientX + "px;")
+        cursor.style.left = posX + "px"
+        cursor.style.top = posY + "px"
+    
+        cursor_border.style.left = posX + "px"
+        cursor_border.style.top = posY + "px"
+    
+    
+        cursor_border.animate({
+            left: posX + "px",
+            top: posY + "px"
+        }, {duration: 500, fill: "forwards"})
+    })
+
+
+
+
+    document.addEventListener("click", (args) => {
+        //console.log(args)
+
+        if (args.target.localName == "img") {
+            //console.log("img")
+
+
+            //cursor_border.classList.add("clicked_img")
+
+
+            //setTimeout(() => {
+            //    cursor_border.classList.remove("clicked_img")
+            //}, 1000)
+
+
+            cursor_border.classList.add("clicked_cursor")
+
+            setTimeout(() => {
+                cursor_border.classList.remove("clicked_cursor")
+            }, 400)
+
+        } else {
+            cursor_border.classList.add("clicked_cursor")
+
+            setTimeout(() => {
+                cursor_border.classList.remove("clicked_cursor")
+            }, 400)
+        }
+
+        
+    })
+
+
+
+
+
+
+
+
+
+    setTimeout(() => {
+        let buttons = document.getElementsByTagName("button")
+
+        for(let i = 0; i < buttons.length; i++) {
+            buttons[i].addEventListener("mouseenter", () => {
+
+                cursor.classList.remove("mouse_leave_buttons")
+                cursor.classList.add("mouse_enter_buttons")
+                cursor_border.style.border = "none"
+                cursor_border.style.width = "0px"
+                cursor_border.style.height = "0px"
+                cursor_border.classList.remove("cursor_pulse")
             })
-            */
-           /*
+    
+            
+    
+            buttons[i].addEventListener("mouseleave", () => {
+
+                cursor.classList.add("mouse_leave_buttons")
+                cursor.classList.remove("mouse_enter_buttons")
+                cursor_border.style.width = "50px"
+                cursor_border.style.height = "50px"
+                cursor_border.style.border = "2px solid rgba(255, 255, 255, 0.5)"
+                cursor_border.classList.add("cursor_pulse")
+            })
+        }
+
+
+
+
+        let ak = document.getElementsByTagName("a")
+
+        for(let i = 0; i < ak.length; i++) {
+            ak[i].addEventListener("mouseenter", () => {
+
+                cursor.classList.remove("mouse_leave_buttons")
+                cursor.classList.add("mouse_enter_buttons")
+                cursor_border.style.border = "none"
+                cursor_border.style.width = "0px"
+                cursor_border.style.height = "0px"
+                cursor_border.classList.remove("cursor_pulse")
+            })
+    
+            
+    
+            ak[i].addEventListener("mouseleave", () => {
+
+                cursor.classList.add("mouse_leave_buttons")
+                cursor.classList.remove("mouse_enter_buttons")
+                cursor_border.style.width = "50px"
+                cursor_border.style.height = "50px"
+                cursor_border.style.border = "2px solid rgba(255, 255, 255, 0.5)"
+                cursor_border.classList.add("cursor_pulse")
+            })
+        }
+
+    }, 2000);
+
+
+}
+//-------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+//-------------------------------------------------------------------------------Hero és Megjelenés
+const left = document.getElementById("oldal_left")
+
+const handleOnMove = e => {
+    const p = e.clientX / window.innerWidth * 100
+
+    left.style.width = p + "%"
+}
+
+
+document.ontouchmove = e => handleOnMove(e.touches[0])
+
+
+
+
+
+const obsever = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        //console.log(entry)
+
+        if(entry.isIntersecting) {
+            entry.target.classList.add("show")
+        } else {
+            entry.target.classList.remove("show")
         }
     })
-    */
-}
+})
+
+
+
+
+
+const needtypeObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        //console.log(entry)
+
+        if(entry.isIntersecting) {
+            entry.target.classList.add("type")
+
+            iras(entry.target, "observeres")
+        } else {
+            
+        }
+    })
+})
+
+
+
+const hiddenElements = document.querySelectorAll(".hidden")
+hiddenElements.forEach((el) => {obsever.observe(el)})
+
+const needtypeElements = document.querySelectorAll(".needtype")
+needtypeElements.forEach((el) => {needtypeObserver.observe(el)})
+//-------------------------------------------------------------------------------
+
