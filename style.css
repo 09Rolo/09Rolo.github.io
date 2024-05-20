@@ -1209,8 +1209,8 @@ a:hover, button:hover {
     border-radius: 50%;
     opacity: 0.5;
     
-    top: -10px;
-    left: -10px;
+    top: -2px;
+    left: -2px;
 
 
     animation-name: cursorAnim1;
