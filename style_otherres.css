@@ -287,4 +287,9 @@
         display: none;
     }
 
+
+
+    #links .socials {
+        max-width: fit-content;
+    }
 }

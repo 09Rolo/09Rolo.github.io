@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+
 function loaded() {
     let betolto = document.getElementById("betolto")
 
@@ -230,7 +231,7 @@ function showcaseimgs(id) {
 
 
 
-//-------------------------------------------------------------------------------Scrollingcuccok
+//-------------------------------------------------------------------------------Scrollcuccok
 window.addEventListener("scroll", setScrollVar)
 window.addEventListener("resize", setScrollVar)
 
@@ -271,7 +272,6 @@ function startscrollanims() {
             })
         }
     })
-
 
 }
 //-------------------------------------------------------------------------------

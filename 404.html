@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <title>Oops</title>
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+
+        body {
+            overflow-x: hidden;
+            background-color: rgb(30, 30, 30);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+
+        .fonttitle {
+            font-family: "Roboto", sans-serif;
+        }
+
+        .cant_select {
+            -webkit-user-select: none; /* Safari */
+            -ms-user-select: none; /* IE 10 and IE 11 */
+            user-select: none; /* Standard syntax */
+        }
+
+
+
+
+        .underline_hover {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+
+            display: inline-block;
+            position: relative;
+        }
+
+        .underline_hover:hover {
+            color: gray;
+        }
+
+        .underline_hover::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color: rgb(250, 30, 30);
+            transition: width 0.3s ease-out;
+        }
+
+        .underline_hover:hover::before{
+            width: 100%;
+        }
+
+
+
+
+
+        .alsoresz .underline_hover {
+            margin: 40px;
+            margin-top: 100px;
+            font-size: 30px;
+            border: 2px solid rgb(100, 0, 0);
+            border-radius: 30px;
+            padding: 10px;
+            overflow: hidden;
+            background-color: rgb(20, 20, 20);
+        }
+
+
+
+        .header {
+            display: none;
+        }
+
+
+        .hmm {
+            position: relative;
+            top: 0%;
+            width: fit-content;
+            height: 100vh;
+            will-change: transform;
+        }
+
+
+        .hmm #hmmszoveg {
+            position: absolute;
+        
+            width: fit-content;
+            color: white;
+            font-size: 41vw;
+            font-weight: 400;
+            text-align: center;
+            margin: 0px;
+            margin-left: 10%;
+            letter-spacing: 50px;
+        }
+
+
+
+
+
+        .alsoresz {
+            min-height: 100vh;
+            max-height: 100vh;
+            width: 100%;
+
+            display: flex;
+            flex-direction: row;
+        }
+
+
+        .alsoresz img {
+            min-width: 50%;
+            max-width: 50%;
+            object-fit: contain;
+        }
+
+
+        .alsoresz .szoveg {
+            min-width: 50%;
+            max-width: 50%;
+            color: white;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .alsoresz .szoveg h1 {
+            font-size: 80px;
+        }
+
+
+        .scroll {
+            display: none;
+        }
+
+
+
+
+        @media screen and (max-width: 1050px) {
+            .hmm {
+                max-height: 100vh;
+            }
+
+            #hmmszoveg {
+                top: 20%;
+            }
+
+            .alsoresz {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        
+        
+            .alsoresz .szoveg {
+                min-width: 100%;
+                max-width: 100%;
+            }
+
+            .alsoresz .szoveg h1 {
+                font-size: 60px;
+            }
+
+
+
+
+
+
+
+            .scroll {
+                top: -200px;
+                margin-top: 100px;
+                margin-bottom: 0px;
+                margin-left: auto;
+                margin-right: auto;
+
+            	width: 60px;
+            	height: 60px;
+            	border: 2px solid white;
+            	border-radius: 50%;
+            	position: relative;
+            	animation: down 1.5s infinite;
+            	-webkit-animation: down 1.5s infinite;
+            	&::before {
+            		content: '';
+            		position: absolute;
+            		top: 15px;
+            		left: 18px;
+            		width: 18px;
+            		height: 18px;
+            		border-left: 2px solid white;
+              	    border-bottom: 2px solid white;
+            		transform: rotate(-45deg);
+            	}
+            }
+
+
+            @keyframes down {
+            	0% {
+            		transform: translate(0);
+            	}
+            	20% {
+            		transform: translateY(15px);
+            	}
+            	40% {
+            		transform: translate(0);
+            	}
+            }
+
+            @-webkit-keyframes down {
+            	0% {
+            		transform: translate(0);
+            	}
+            	20% {
+            		transform: translateY(15px);
+            	}
+            	40% {
+            		transform: translate(0);
+            	}
+            }
+
+        }
+
+
+
+        @media screen and (max-width: 650px) {
+            .header {
+                position: fixed;
+                min-width: 100%;
+                max-width: 100%;
+                height: fit-content;
+                display: inline;
+                text-align: center;
+                padding: 15px;
+
+                border-bottom: 1.5px solid rgb(100, 0, 0);
+            }
+
+            .header h1 {
+                font-weight: bolder;
+            }
+
+            .hmm, #hmmszoveg {
+                width: 0px;
+                height: 0px;
+                display: none;
+            }
+
+            .alsoresz .szoveg h1 {
+                font-size: 40px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <div class="header">
+        <h1><a href="./" class="underline_hover" style="text-decoration: underline;">KissRoland.hu</a></h1>
+    </div>
+    
+    <div class="hmm">
+        <h1 id="hmmszoveg" class="fonttitle cant_select">Hmmm</h1>
+    </div>
+
+    <div class="scroll"></div>
+
+    <div class="alsoresz">
+        <img src="./images/404raccoon.png">
+
+        <div class="szoveg">
+            <h1>Page not found</h1>
+
+            <a href="./" class="underline_hover">Back to home</a>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <script>
+        startscrollanims()
+
+        function startscrollanims() {
+            gsap.registerPlugin(ScrollTrigger);
+
+            ScrollTrigger.create({
+                trigger: ".hmm",
+                start: "0%",
+                end: "100%",
+                scrub: 1,
+                pin: true,
+                onUpdate: (self) => {
+                    gsap.to(".hmm", {
+                        x: `${-100 * self.progress}vw`,
+                        duration: 1.5,
+                        ease: "power3.out",
+                    })
+                }
+            })
+        }
+    </script>
+</body>
+</html>
