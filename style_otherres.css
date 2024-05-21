@@ -1,5 +1,5 @@
 
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 741px) {
     #upinhero {
         display: none !important;
     }
@@ -32,7 +32,7 @@
 
 
 /*-----------------------------------------------------------------------------------------------------------------------*/
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 740px) {
     
     html {
         scroll-behavior: smooth;
@@ -88,7 +88,7 @@
 
 
     #upinhero > * {
-        color: var(--dark);
+        color: var(--color);
         background-color: var(--gray);
         border: 2px solid var(--red-underline);
         border-radius: 20px;
@@ -275,6 +275,13 @@
 
 
 
+    body {
+        cursor: auto;
+    }
+
+    a, button {
+        cursor: pointer !important;
+    }
 
     .cursor {
         display: none;
@@ -291,5 +298,12 @@
 
     #links .socials {
         max-width: fit-content;
+    }
+
+
+
+
+    #whatido .szovegbox {
+        max-width: 80%;
     }
 }

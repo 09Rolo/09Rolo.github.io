@@ -936,7 +936,7 @@ body {
 
 
 
-#whatdoido {
+#whatido {
     width: 100%;
     height: fit-content;
 
@@ -951,14 +951,14 @@ body {
 
 
 
-#whatdoido .bgblack {
+#whatido .bgblack {
     position: relative;
     width: 100%;
     height: 0px;
 
 }
 
-#whatdoido .bgb {
+#whatido .bgb {
     position: relative;
     left: 0px;
     top: -20px;
@@ -975,14 +975,14 @@ body {
 
 
 
-#whatdoido h1.fotitle {
+#whatido h1.fotitle {
     margin-top: 30px;
     text-align: center;
     font-size: 60px;
 }
 
 
-#whatdoido hr {
+#whatido hr {
     margin-top: 30px;
     width: 100%;
     height: 5px;
@@ -993,7 +993,7 @@ body {
 
 
 
-#whatdoido .szovegbox {
+#whatido .szovegbox {
     max-width: 50%;
     margin: 40px;
 
@@ -1004,12 +1004,12 @@ body {
 
 
 
-#whatdoido .szovegbox.left {
+#whatido .szovegbox.left {
     position: relative;
     margin-right: auto;
 }
 
-#whatdoido .szovegbox.right {
+#whatido .szovegbox.right {
     position: relative;
     margin-left: auto;
     text-align: end;

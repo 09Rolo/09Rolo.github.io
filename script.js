@@ -9,9 +9,10 @@ kurzor()
 document.addEventListener("DOMContentLoaded", () => {
     document.documentElement.style.scrollBehavior = "auto"
     window.scrollTo(0,0)
-
+    
     setTimeout(() => {
         startscrollanims()
+        document.documentElement.style.scrollBehavior = "smooth"
     }, 200)
 })
 
