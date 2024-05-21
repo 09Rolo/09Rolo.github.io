@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="links_style.css">
+    <title>Links</title>  
+</head>
+<body onload="loaded()">
+    <div id="fuggony"></div>
+
+
+   
+    <div class="container">
+        <div class="header">
+            <img src="./images/profilepic.png" class="cant_select">
+            <h1 class="cant_select"><a href="./" target="_blank" rel="noopener noreferrer" class="underline_hover fonttitle cant_select">Kiss Roland</a></h1>
+            <h2 class="cant_select"><span class="red">I'm</span> <span class="white">from</span> <span class="green">Hungary</span></h2>
+            <p class="cant_select">"Frontend and backend developer"</p>
+        </div>
+
+        <hr>
+
+
+        <div class="links">
+
+            <a href="https://github.com/09Rolo" target="_blank" rel="noopener noreferrer" class="link">
+                <img src="./images/github.png">
+                <h3>Github</h3>
+            </a>
+
+            <a href="https://www.instagram.com/09rolo/" target="_blank" rel="noopener noreferrer" class="link">
+                <img src="./images/instagram.png">
+                <h3>Instagram</h3>
+            </a>
+
+            <a href="https://x.com/09Rolo1" target="_blank" rel="noopener noreferrer" class="link">
+                <img src="./images/x.png">
+                <h3>X</h3>
+            </a>
+
+            <a href="https://www.youtube.com/@mr.roland99" target="_blank" rel="noopener noreferrer" class="link">
+                <img src="./images/youtube.png">
+                <h3>Youtube</h3>
+            </a>
+
+            <a href="mailto:rolo.kiss.09@gmail.com" class="link">
+                <img src="./images/gmail.png">
+                <h3>Gmail</h3>
+            </a>
+
+        </div>
+    </div>
+
+
+
+
+    <script>
+        function loaded() {
+            kurzor()
+        }
+
+
+        //-------------------------------------------------------------------------------Kurzor
+        function kurzor() {
+            let body = document.querySelector("body")
+            body.id = "body"
+            body = document.getElementById("body")
+
+        
+        
+            body.innerHTML += `
+                <div class='cursor'></div>
+                <div class='cursor-border cursor_pulse'></div>
+            `
+        
+
+
+            const cursor = document.querySelector(".cursor")
+            const cursor_border = document.querySelector(".cursor-border")
+        
+            document.addEventListener("mousemove", (merre) => {
+                const posX = merre.clientX
+                const posY = merre.clientY
+            
+
+                //cursor.setAttribute("style", "top: " + merre.clientY + "px" +    "; left: " + merre.clientX + "px;")
+                cursor.style.left = posX + "px"
+                cursor.style.top = posY + "px"
+            
+                cursor_border.style.left = posX + "px"
+                cursor_border.style.top = posY + "px"
+            
+            
+                cursor_border.animate({
+                    left: posX + "px",
+                    top: posY + "px"
+                }, {duration: 500, fill: "forwards"})
+            })
+        
+        
+        
+        
+            document.addEventListener("click", (args) => {
+                //console.log(args)
+            
+                if (args.target.localName == "img") {
+                    //console.log("img")
+                
+                
+                    //cursor_border.classList.add("clicked_img")
+                
+                
+                    //setTimeout(() => {
+                    //    cursor_border.classList.remove("clicked_img")
+                    //}, 1000)
+                    
+                    
+                    cursor_border.classList.add("clicked_cursor")
+                    
+                    setTimeout(() => {
+                        cursor_border.classList.remove("clicked_cursor")
+                    }, 400)
+                
+                } else {
+                    cursor_border.classList.add("clicked_cursor")
+                
+                    setTimeout(() => {
+                        cursor_border.classList.remove("clicked_cursor")
+                    }, 400)
+                }
+            
+
+            })
+        
+        
+        
+        
+        
+        
+        
+        
+        
+            setTimeout(() => {
+                let buttons = document.getElementsByTagName("button")
+            
+                for(let i = 0; i < buttons.length; i++) {
+                    buttons[i].addEventListener("mouseenter", () => {
+                    
+                        cursor.classList.remove("mouse_leave_buttons")
+                        cursor.classList.add("mouse_enter_buttons")
+                        cursor_border.style.border = "none"
+                        cursor_border.style.width = "0px"
+                        cursor_border.style.height = "0px"
+                        cursor_border.classList.remove("cursor_pulse")
+                    })
+                
+
+                
+                    buttons[i].addEventListener("mouseleave", () => {
+                    
+                        cursor.classList.add("mouse_leave_buttons")
+                        cursor.classList.remove("mouse_enter_buttons")
+                        cursor_border.style.width = "50px"
+                        cursor_border.style.height = "50px"
+                        cursor_border.style.border = "2px solid rgba(255, 255, 255, 0.5)"
+                        cursor_border.classList.add("cursor_pulse")
+                    })
+                }
+            
+            
+            
+            
+                let ak = document.getElementsByTagName("a")
+            
+                for(let i = 0; i < ak.length; i++) {
+                    ak[i].addEventListener("mouseenter", () => {
+                    
+                        cursor.classList.remove("mouse_leave_buttons")
+                        cursor.classList.add("mouse_enter_buttons")
+                        cursor_border.style.border = "none"
+                        cursor_border.style.width = "0px"
+                        cursor_border.style.height = "0px"
+                        cursor_border.classList.remove("cursor_pulse")
+                    })
+                
+
+                
+                    ak[i].addEventListener("mouseleave", () => {
+                    
+                        cursor.classList.add("mouse_leave_buttons")
+                        cursor.classList.remove("mouse_enter_buttons")
+                        cursor_border.style.width = "50px"
+                        cursor_border.style.height = "50px"
+                        cursor_border.style.border = "2px solid rgba(255, 255, 255, 0.5)"
+                        cursor_border.classList.add("cursor_pulse")
+                    })
+                }
+            
+            }, 2000);
+        
+        
+        }
+        //-------------------------------------------------------------------------------
+    </script>
+</body>
+</html>

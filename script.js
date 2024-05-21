@@ -154,7 +154,7 @@ function iras(element, arg) {
                         for (let i = 0; i < txt.length; i++) {
                             setTimeout(() => {
                                 elem.innerHTML += txt.charAt(i);  
-                            }, 1500 + i*speed);
+                            }, 500 + i*speed * 2);
                         }
 
 
