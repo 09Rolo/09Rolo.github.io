@@ -267,7 +267,7 @@ function startscrollanims() {
         pin: true,
         onUpdate: (self) => {
             gsap.to(".projectseleje", {
-                x: `${-350 * self.progress}vw`,
+                x: `${-200 * self.progress}vw`,
                 duration: 1.5,
                 ease: "power3.out",
             })
