@@ -1,5 +1,30 @@
 
-@media screen and (min-width: 741px) {
+
+@media screen and (max-width: 410px) {
+    .flagneve {
+        display: none !important;
+    }
+    .flagreszek {
+        margin-right: 0px;
+        margin-left: -10px;
+    }
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+
+@media screen and (max-width: 910px) {
+    .flagneve {
+        display: none;
+    }
+    .flagreszek {
+        margin-right: -10px;
+    }
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+@media screen and (min-width: 838px) {
     #upinhero {
         display: none !important;
     }
@@ -30,9 +55,8 @@
 
 
 
-
 /*-----------------------------------------------------------------------------------------------------------------------*/
-@media screen and (max-width: 740px) {
+@media screen and (max-width: 838px) {
     
     html {
         scroll-behavior: smooth;
@@ -69,7 +93,13 @@
 
 
 
+    .flagneve {
+        display: block;
+    }
 
+    .flagreszek {
+        margin-right: 0px;
+    }
 
 
     #upinhero {

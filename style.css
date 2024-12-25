@@ -404,6 +404,50 @@ body {
 
 
 
+.flag {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    min-height: 35px;
+}
+
+.flagneve {
+    display: flex;
+}
+
+.flagreszek {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-right: -10px;
+}
+
+.huflagresz {
+    width: 20px;
+    height: 5px;
+    border: none;
+    margin-left: 10px;
+}
+
+.huflagresz:nth-of-type(1) {
+    background-color: #CE2939;
+}
+.huflagresz:nth-of-type(2) {
+    background-color: #FFFFFF;
+}
+.huflagresz:nth-of-type(3) {
+    background-color: #477050;
+}
+
+
+.enflagresz {
+    max-height: 13.5px;
+    border: none;
+    margin-left: 10px;
+}
+
+
 #hero {
     position: sticky;
     top: 0px;
